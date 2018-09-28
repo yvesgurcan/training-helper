@@ -1,7 +1,8 @@
 const HOST_PROD = 'http://dashboard.cbtn-tools-prod.local';
 const HOST_QA = 'http://dashboard.cbtn-tools-qa.local';
+const HOST_DEV = '';
 const ROUTE = '/training/submit';
-const BASE_URL = `${HOST_PROD}${ROUTE}`;
+const BASE_URL = `${HOST_DEV}${ROUTE}`;
 
 function getPageTitle() {
     // opengraph first because of github repos' metadata
