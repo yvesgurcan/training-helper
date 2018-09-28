@@ -30,7 +30,7 @@ function encode(string) {
 }
 
 chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
+    function (request, sender, sendResponse) {
         const { event } = request;
         if (event === 'click') {
             console.log('parsing current page...');
