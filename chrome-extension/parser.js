@@ -4,26 +4,26 @@ const HOST_DEV = 'http://localhost:8080';
 const ROUTE = '/training/submit';
 const BASE_URL = `${HOST_DEV}${ROUTE}`;
 
-function getPageTitle() {
+function getTopic() {
     // opengraph first because of github repos' metadata
-    let title = $("meta[property='og:title']").attr('content');
+    let topic = $("meta[property='og:title']").attr('content');
 
     // header
-    if (!title) {
-        title = $("title").html();
+    if (!topic) {
+        topic = $("title").html();
     }
 
     // meta
-    if (!title) {
-        title = $("meta[name='title']").attr('content');
+    if (!topic) {
+        topic = $("meta[name='title']").attr('content');
     }
 
     // twitter
-    if (!title) {
-        title = $("meta[name='twitter:title']").attr('content');
+    if (!topic) {
+        topic = $("meta[name='twitter:title']").attr('content');
     }
 
-    return title;
+    return topic;
 }
 
 function encode(string) {
@@ -36,13 +36,13 @@ chrome.runtime.onMessage.addListener(
         if (event === 'click') {
             console.log('parsing current page...');
 
-            const url = document.location.href;
-            let title = getPageTitle();
-            console.log({ url, title });
+            const link = document.location.href;
+            let topic = getTopic();
+            console.log({ link, topic });
 
             const parameters =
-                `?url=${encode(url)}` +
-                `&title=${encode(title)}`;
+                `?topic=${encode(topic)}` + 
+                `&link=${encode(link)}`;
 
             const dashboardUrl = `${BASE_URL}${parameters}`;
             console.log(`new tab will open at '${dashboardUrl.replace(/\s/g,'%20')}'`);
