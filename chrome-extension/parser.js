@@ -1,6 +1,6 @@
 const HOST_PROD = 'http://dashboard.cbtn-tools-prod.local';
 const HOST_QA = 'http://dashboard.cbtn-tools-qa.local';
-const HOST_DEV = 'http://loicalhost:8080';
+const HOST_DEV = 'http://localhost:8080';
 const ROUTE = '/training/submit';
 const BASE_URL = `${HOST_DEV}${ROUTE}`;
 
