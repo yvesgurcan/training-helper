@@ -1,7 +1,7 @@
 {
     "name": "Training Helper",
     "description": "This Chrome extension helps you record your training.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Yves Gurcan",
     "icons": {
         "128": "icon128.png"
