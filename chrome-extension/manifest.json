@@ -7,7 +7,7 @@
         "128": "icon128.png"
     },
     "background": {
-        "scripts": ["open_app.js"]
+        "scripts": ["open_dashboard.js"]
     },
     "content_scripts": [
         {
