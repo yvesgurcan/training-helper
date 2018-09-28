@@ -43,10 +43,10 @@ chrome.runtime.onMessage.addListener(
                 `?url=${encode(url)}` +
                 `&title=${encode(title)}`;
 
-            const url = `${BASE_URL}${parameters}`;
-            console.log(`new tab will open at '${url.replace(/\s/g,'%20')}'`);
+            const dashboardUrl = `${BASE_URL}${parameters}`;
+            console.log(`new tab will open at '${dashboardUrl.replace(/\s/g,'%20')}'`);
 
-            chrome.runtime.sendMessage({ event: 'open_dashboard', url });
+            chrome.runtime.sendMessage({ event: 'open_dashboard', url: dashboardUrl });
         }
     }
 );
