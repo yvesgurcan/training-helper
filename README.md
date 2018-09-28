@@ -3,8 +3,8 @@ Creator: Yves Gurcan
 
 ## How to install
 * Download and unzip `training-helper.zip`.
+* Open the newly created `training-helper` folder.
 * Open Chrome. In the address bar, enter `chrome://extensions`.
-* Open the `training-helper` folder.
 * Drag and drop `chrome-extension.crx` to Chrome.
 * Accept installing the extension.
 
