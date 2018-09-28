@@ -36,7 +36,7 @@ chrome.runtime.onMessage.addListener(
             console.log('parsing current page...');
 
             const url = document.location.href;
-            let title = getPagetitle();
+            let title = getPageTitle();
             console.log({ url, title });
 
             const parameters =
