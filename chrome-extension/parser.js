@@ -35,7 +35,7 @@ function getTrainedFor(trainedFor) {
         return 0;
     }
 
-    return trainedFor * 60;
+    return trainedFor;
 }
 
 chrome.runtime.onMessage.addListener(
